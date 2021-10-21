@@ -18,3 +18,17 @@ exports.getAllMahasiswa = function(req, res){
         }
     });
 }
+
+// menampilkan data mhs berdasarkan id
+exports.getMahasiswaId = function(req, res){
+    let id = req.params.id
+    connection.query('SELECT * FROM mahasiswa WHERE id_mahasiswa = ?', [id],
+        function(error, rows, fields){
+            if(error){
+                connection.log(error);
+            }else{
+                response.ok(rows, res);
+            }
+        }
+    )
+}
