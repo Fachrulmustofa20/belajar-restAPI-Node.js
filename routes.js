@@ -14,5 +14,7 @@ module.exports = function(app) {
     app.route('/mahasiswa/:id').put(json.putMahasiswaId);
 
     app.route('/mahasiswa/:id').delete(json.deleteMahasiswaId);
+
+    app.route('/matakuliah').get(json.groupMatakuliah);
 }
 
