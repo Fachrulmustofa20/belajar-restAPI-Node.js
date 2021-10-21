@@ -5,8 +5,10 @@ module.exports = function(app) {
 
     app.route('/').get(json.index);
 
-    app.route('/tampil').get(json.getAllMahasiswa);
+    app.route('/mahasiswa').get(json.getAllMahasiswa);
 
-    app.route('/tampil/:id').get(json.getMahasiswaId);
+    app.route('/mahasiswa/:id').get(json.getMahasiswaId);
+
+    app.route('/mahasiswa').post(json.addMahasiswa);
 }
 
