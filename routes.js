@@ -12,5 +12,7 @@ module.exports = function(app) {
     app.route('/mahasiswa').post(json.addMahasiswa);
 
     app.route('/mahasiswa/:id').put(json.putMahasiswaId);
+
+    app.route('/mahasiswa/:id').delete(json.deleteMahasiswaId);
 }
 
